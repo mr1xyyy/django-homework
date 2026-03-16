@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <aside>
+        <img src="{% static 'main/img/nyarch.png' %}" alt="logo">
+        <span class="logo"> Nyarch </span>
+        <h3>Navigatsiya</h3>
+        <ul>
+            <a href="{% url 'home' %}"> <li><i class="fa fa-home" aria-hidden="true"> Bosh sahifa</i></li></a>
+            <a href="{% url 'about' %}"> <li><i class="fa fa-address-card" aria-hidden="true"> Kompaniya haqida</i></li></a>
+            <a href=""> <li><i class="fa fa-paper-plane" aria-hidden="true"> Bog'lanish</i></li></a>
+        </ul>
+    </aside>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>
