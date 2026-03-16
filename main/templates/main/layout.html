@@ -18,13 +18,15 @@
         <ul>
             <a href="{% url 'home' %}"> <li><i class="fa fa-home" aria-hidden="true"> Bosh sahifa</i></li></a>
             <a href="{% url 'about' %}"> <li><i class="fa fa-address-card" aria-hidden="true"> Kompaniya haqida</i></li></a>
+            <a href="{% url 'news_home' %}"> <li><i class="fa fa-newspaper-o" aria-hidden="true"> Yangiliklar</i></li></a>
             <a href=""> <li><i class="fa fa-paper-plane" aria-hidden="true"> Bog'lanish</i></li></a>
         </ul>
     </aside>
-
+<main>
     {% block content %}
 
     {% endblock %}
+</main>
 
 </body>
 </html>

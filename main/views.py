@@ -3,7 +3,10 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request,'main/index.html')
+    data = {
+        'title': 'Bosh sahifa',
+    }
+    return render(request,'main/index.html', data)
 
 def about(request):
     return render(request,'main/about.html')
