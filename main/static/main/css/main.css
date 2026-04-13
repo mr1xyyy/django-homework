@@ -12,6 +12,7 @@ aside{
 }
 aside img{
     width: 80px;
+    float: left;
 }
 aside .logo{
     font-size: 40px;
