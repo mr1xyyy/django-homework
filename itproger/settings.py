@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-9mt_yp6l^lmou*mz76tz1h3jjo+3%n$#5-geqsup4!20*7z*z7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'itproger.urls'
@@ -122,6 +123,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES=[
-    BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    BASE_DIR / 'main/static'
 ]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
